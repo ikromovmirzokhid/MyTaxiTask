@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/pinIc"
+        android:layout_width="45dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_pin_eta_main"
+        android:translationY="-25dp" />
+
+    <View
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/locationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="228dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:id="@+id/btnBg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/ripple_effect_oval"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_near_me_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@id/btnBg"
+            app:layout_constraintLeft_toLeftOf="@id/btnBg"
+            app:layout_constraintRight_toRightOf="@id/btnBg"
+            app:layout_constraintTop_toTopOf="@id/btnBg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navigationToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:id="@+id/navBtnBg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/ripple_effect_oval"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@id/navBtnBg"
+            app:layout_constraintLeft_toLeftOf="@id/navBtnBg"
+            app:layout_constraintRight_toRightOf="@id/navBtnBg"
+            app:layout_constraintTop_toTopOf="@id/navBtnBg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:translationY="-35dp"
+        android:visibility="gone" />
+
+    <include layout="@layout/supported_regions_bottom_sheet" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tripBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="110dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/startPoint"
+            android:layout_width="35dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/oval_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/car_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startPoint">
+
+            <TextView
+                android:id="@+id/carType"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/car_type"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/carId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/car_number_border1"
+                android:fontFamily="@font/roboto"
+                android:paddingStart="7dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="3dp"
+                android:paddingBottom="3dp"
+                android:text="@string/car_id"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carType" />
+
+            <TextView
+                android:id="@+id/carNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/car_number_border2"
+                android:fontFamily="@font/roboto"
+                android:paddingStart="7dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="3dp"
+                android:text="@string/car_number"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/carId"
+                app:layout_constraintTop_toBottomOf="@id/carType" />
+
+            <TextView
+                android:id="@+id/tariff"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/tariff_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carNumber" />
+
+
+            <TextView
+                android:id="@+id/tariffType"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/tariff_type_text"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tariff" />
+
+            <TextView
+                android:id="@+id/payment"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/payment_type_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@id/tariff"
+                app:layout_constraintTop_toBottomOf="@id/carNumber" />
+
+
+            <TextView
+                android:id="@+id/paymentType"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/payment_type_text2"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tariff"
+                app:layout_constraintTop_toBottomOf="@id/tariff" />
+
+            <ImageButton
+                android:id="@+id/btnCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect_oval"
+                android:src="@drawable/bnt_call"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/list_item_bottom_line"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/trip_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/car_info">
+
+            <ImageView
+                android:id="@+id/point_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_point_start"
+                app:layout_constraintBottom_toBottomOf="@id/tripStartDes"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tripStartDes" />
+
+            <View
+                android:id="@+id/dashed_line"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:background="@drawable/dashed_line"
+                app:layout_constraintLeft_toLeftOf="@id/point_start"
+                app:layout_constraintRight_toRightOf="@id/point_start"
+                app:layout_constraintTop_toBottomOf="@id/point_start" />
+
+            <ImageView
+                android:id="@+id/point_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_point_end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dashed_line" />
+
+            <TextView
+                android:id="@+id/tripStartTime"
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/trip_started_time"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tripStartDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/start_address_text"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tripStartTime" />
+
+            <TextView
+                android:id="@+id/tripEndTime"
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/trip_end_time"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/point_end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dashed_line" />
+
+            <TextView
+                android:id="@+id/tripEndDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/end_address_text"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tripEndTime" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/list_item_bottom_line"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tripInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trip_history">
+
+            <TextView
+                android:id="@+id/tripTimeField"
+                android:layout_width="104dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/trip_time_field_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tripTime"
+                android:layout_width="160dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="end"
+                android:text="@string/trip_time_text"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/distanceField"
+                android:layout_width="104dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/distance_field_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tripTimeField" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="160dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="end"
+                android:text="@string/distance_text"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tripTime" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/list_item_bottom_line"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/feeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tripInfo">
+
+
+            <TextView
+                android:id="@+id/baseFareField"
+                android:layout_width="104dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/base_fare_field_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/baseFare"
+                android:layout_width="160dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="end"
+                android:text="@string/base_fare_text"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rideFeeField"
+                android:layout_width="104dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/ride_fee_field_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/baseFareField" />
+
+            <TextView
+                android:id="@+id/rideFee"
+                android:layout_width="160dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="end"
+                android:text="@string/ride_fee_text"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/baseFare" />
+
+            <TextView
+                android:id="@+id/waitingFeeField"
+                android:layout_width="104dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/waiting_fee_field_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rideFeeField" />
+
+            <TextView
+                android:id="@+id/waitingFee"
+                android:layout_width="160dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="end"
+                android:text="@string/waiting_fee_text"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rideFee" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/list_item_bottom_line"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/driverInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feeInfo">
+
+            <ImageView
+                android:id="@+id/driverPhoto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/driver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/driverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/driver_name_text"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/driverPhoto"
+                app:layout_constraintTop_toTopOf="@id/driverPhoto" />
+
+            <TextView
+                android:id="@+id/ratingField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/rating_field_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@id/driverPhoto"
+                app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/rating_text"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/ratingField"
+                app:layout_constraintLeft_toRightOf="@id/ratingField"
+                app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+            <ImageView
+                android:id="@+id/starIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_driver_star"
+                app:layout_constraintBottom_toBottomOf="@id/rating"
+                app:layout_constraintLeft_toRightOf="@id/rating"
+                app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+            <TextView
+                android:id="@+id/tripsField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/trips_field_text"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@id/starIcon"
+                app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+            <TextView
+                android:id="@+id/trips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/trips_text"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/ratingField"
+                app:layout_constraintLeft_toRightOf="@id/tripsField"
+                app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

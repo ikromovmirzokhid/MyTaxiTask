@@ -1,0 +1,214 @@
+<resources>
+    <string name="app_name">MyTaxiTask</string>
+    <string name="google_maps_api_key">AIzaSyDOPE1VIWXWhiyxmdYggTUx2VzjFETzdvY</string>
+    <string name="trip_history_text">Trip history</string>
+    <string name="start_address_text">Sagbon 156 a block, Olmazor distri…</string>
+    <string name="end_address_text">Amir Temur Avenue 2a block 23 A</string>
+    <string name="date_text">11.05.2018 12:55</string>
+    <string name="payment_text">18,200sum</string>
+    <string name="car_type">White Cobalt</string>
+    <string name="car_id">01</string>
+    <string name="car_number">J 775 AA</string>
+    <string name="tariff_text">Tariff</string>
+    <string name="tariff_type_text">Comfort</string>
+    <string name="payment_type_text">Payment Type</string>
+    <string name="payment_type_text2">Cash</string>
+    <string name="trip_started_time">18:25, Today</string>
+    <string name="trip_end_time">19:00</string>
+    <string name="trip_time_field_text">Trip time</string>
+    <string name="distance_field_text">Distance</string>
+    <string name="trip_time_text">00:35</string>
+    <string name="distance_text">18,4km</string>
+    <string name="base_fare_field_text">Base Fare</string>
+    <string name="base_fare_text">7,000</string>
+    <string name="ride_fee_field_text">Ride fee</string>
+    <string name="ride_fee_text">15,600</string>
+    <string name="waiting_fee_field_text">Waiting fee</string>
+    <string name="waiting_fee_text">1,850</string>
+    <string name="driver_name_text">Temur</string>
+    <string name="rating_field_text">Rating:</string>
+    <string name="rating_text">4.9</string>
+    <string name="trips_field_text">Trips:</string>
+    <string name="trips_text">2189</string>
+    <string name="place_name_text">Urikzor (B. Boboyev) house 106</string>
+    <string name="pick_up_btn_text">Set pick up</string>
+    <string name="region_is_not_supported_text">Region is not supported</string>
+    <string name="my_taxi_message">At the moment, the service MyTaxi not working in this region.</string>
+    <string name="enter_your_pickup_location">Enter your pickup location</string>
+    <string name="trips_menu_text">Trips</string>
+
+    <string-array name="tashkent_lat">
+        <item>41.243209</item>
+        <item>41.243468</item>
+        <item>41.236746</item>
+        <item>41.236488</item>
+        <item>41.239586</item>
+        <item>41.243459</item>
+        <item>41.246040</item>
+        <item>41.250451</item>
+        <item>41.267485</item>
+        <item>41.270761</item>
+        <item>41.272438</item>
+        <item>41.272438</item>
+        <item>41.287531</item>
+        <item>41.288900</item>
+        <item>41.294962</item>
+        <item>41.300895</item>
+        <item>41.304270</item>
+        <item>41.305901</item>
+        <item>41.306077</item>
+        <item>41.306432</item>
+        <item>41.306983</item>
+        <item>41.307334</item>
+        <item>41.308447</item>
+        <item>41.309657</item>
+        <item>41.310464</item>
+        <item>41.315666</item>
+        <item>41.330582</item>
+        <item>41.334834</item>
+        <item>41.336457</item>
+        <item>41.338010</item>
+        <item>41.338946</item>
+        <item>41.340251</item>
+        <item>41.340538</item>
+        <item>41.341928</item>
+        <item>41.342264</item>
+        <item>41.344089</item>
+        <item>41.369748</item>
+        <item>41.370841</item>
+        <item>41.382750</item>
+        <item>41.383944</item>
+        <item>41.384772</item>
+        <item>41.384949</item>
+        <item>41.383771</item>
+        <item>41.383584</item>
+        <item>41.384894</item>
+        <item>41.389431</item>
+        <item>41.396530</item>
+        <item>41.397673</item>
+        <item>41.398156</item>
+        <item>41.398316</item>
+        <item>41.397576</item>
+        <item>41.396254</item>
+        <item>41.359990</item>
+        <item>41.357868</item>
+        <item>41.355551</item>
+        <item>41.352778</item>
+        <item>41.338075</item>
+        <item>41.335114</item>
+        <item>41.331678</item>
+        <item>41.310969</item>
+        <item>41.277542</item>
+        <item>41.277178</item>
+        <item>41.264905</item>
+        <item>41.263792</item>
+        <item>41.261808</item>
+        <item>41.260840</item>
+        <item>41.260049</item>
+        <item>41.252048</item>
+        <item>41.249935</item>
+        <item>41.236414</item>
+        <item>41.234787</item>
+        <item>41.230508</item>
+        <item>41.229626</item>
+        <item>41.229164</item>
+        <item>41.229132</item>
+        <item>41.228744</item>
+        <item>41.226492</item>
+        <item>41.226054</item>
+        <item>41.227344</item>
+        <item>41.226861</item>
+        <item>41.227216</item>
+        <item>41.242578</item>
+        <item>41.243482</item>
+    </string-array>
+
+    <string-array name="tashkent_lng">
+        <item>69.217653</item>
+        <item>69.313097</item>
+        <item>69.322565</item>
+        <item>69.328058</item>
+        <item>69.335268</item>
+        <item>69.339388</item>
+        <item>69.349001</item>
+        <item>69.355316</item>
+        <item>69.366646</item>
+        <item>69.363192</item>
+        <item>69.362333</item>
+        <item>69.362333</item>
+        <item>69.359758</item>
+        <item>69.359093</item>
+        <item>69.353771</item>
+        <item>69.345016</item>
+        <item>69.342135</item>
+        <item>69.341797</item>
+        <item>69.341336</item>
+        <item>69.341315</item>
+        <item>69.341840</item>
+        <item>69.342570</item>
+        <item>69.343317</item>
+        <item>69.343950</item>
+        <item>69.345143</item>
+        <item>69.354411</item>
+        <item>69.375208</item>
+        <item>69.378635</item>
+        <item>69.378987</item>
+        <item>69.378408</item>
+        <item>69.377644</item>
+        <item>69.375562</item>
+        <item>69.374692</item>
+        <item>69.367093</item>
+        <item>69.366279</item>
+        <item>69.363201</item>
+        <item>69.324701</item>
+        <item>69.323930</item>
+        <item>69.318655</item>
+        <item>69.317535</item>
+        <item>69.315236</item>
+        <item>69.311373</item>
+        <item>69.301045</item>
+        <item>69.285300</item>
+        <item>69.281185</item>
+        <item>69.273949</item>
+        <item>69.262619</item>
+        <item>69.258435</item>
+        <item>69.245434</item>
+        <item>69.236784</item>
+        <item>69.233029</item>
+        <item>69.230425</item>
+        <item>69.172875</item>
+        <item>69.170368</item>
+        <item>69.168404</item>
+        <item>69.166697</item>
+        <item>69.164380</item>
+        <item>69.163680</item>
+        <item>69.161908</item>
+        <item>69.152648</item>
+        <item>69.146592</item>
+        <item>69.146512</item>
+        <item>69.147177</item>
+        <item>69.147327</item>
+        <item>69.148357</item>
+        <item>69.149086</item>
+        <item>69.149880</item>
+        <item>69.161747</item>
+        <item>69.163678</item>
+        <item>69.168463</item>
+        <item>69.169268</item>
+        <item>69.172668</item>
+        <item>69.173744</item>
+        <item>69.175125</item>
+        <item>69.176263</item>
+        <item>69.178494</item>
+        <item>69.185256</item>
+        <item>69.187043</item>
+        <item>69.194247</item>
+        <item>69.198805</item>
+        <item>69.200993</item>
+        <item>69.214382</item>
+        <item>69.217730</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

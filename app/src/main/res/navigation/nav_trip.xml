@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_trip"
+    app:startDestination="@id/tripHistoryFragment">
+
+    <fragment
+        android:id="@+id/tripHistoryFragment"
+        android:name="com.imb.googlemapexample.fragments.TripHistoryFragment"
+        android:label="TripHistoryFragment"
+        tools:layout="@layout/fragment_trip_history">
+        <action
+            android:id="@+id/action_tripHistoryFragment_to_tripMapFragment"
+            app:destination="@id/tripMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripMapFragment"
+        android:name="com.imb.googlemapexample.fragments.TripMapFragment"
+        android:label="TripMapFragment"
+        tools:layout="@layout/trip_map_fragment"/>
+</navigation>
