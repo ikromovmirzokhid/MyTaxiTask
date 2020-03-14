@@ -1,13 +1,16 @@
 package com.imb.googlemapexample.fragments
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -58,6 +61,8 @@ class TripMapFragment : Fragment(), OnMapReadyCallback {
     private lateinit var trip: Trip
 
     private lateinit var navController: NavController
+
+    private lateinit var dialIntent: Intent
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -116,6 +121,11 @@ class TripMapFragment : Fragment(), OnMapReadyCallback {
             navController.popBackStack()
         }
 
+        btnCall.setOnClickListener {
+            dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + trip.phoneNum))
+            startActivity(dialIntent)
+        }
+
     }
 
     override fun onMapReady(p0: GoogleMap?) {
@@ -132,13 +142,14 @@ class TripMapFragment : Fragment(), OnMapReadyCallback {
 
 
             googleMap.addMarker(
-                MarkerOptions().position(endPos).title("Start Point")
+                MarkerOptions().position(endPos).title("End Point")
                     .icon(BitmapDescriptorFactory.fromBitmap(drawBitmap("endPoint")))
+                    .anchor(0.5f, 0.3f)
             )
 
             getRoute(startPos, endPos)
 
-            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(startPos, 13f))
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(startPos, 13f))
         }
     }
 
@@ -206,7 +217,7 @@ class TripMapFragment : Fragment(), OnMapReadyCallback {
                             // after getting all positions we can draw proper polyline between 2 locations
                             routelist.add(endPos)
                             val rectLine = PolylineOptions().width(POLYLINE_STROKE_WIDTH_PX)
-                                .color(COLOR_BLUE_ARGB)
+                                .color(activity!!.resources.getColor(R.color.polyLineColor))
                             for (i in 0 until routelist.size) {
                                 rectLine.add(routelist[i])
                             }

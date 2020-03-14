@@ -13,8 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.TripHistoryActivity"
-            android:parentActivityName=".activities.MainActivity"></activity>
+            android:name=".activities.TripHistoryActivity"/>
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

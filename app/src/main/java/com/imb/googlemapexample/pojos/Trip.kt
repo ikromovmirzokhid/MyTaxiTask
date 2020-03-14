@@ -6,5 +6,6 @@ data class Trip(
     val latA: Double,
     val lngA: Double,
     val latB: Double,
-    val lngB: Double
+    val lngB: Double,
+    val phoneNum: String
 )

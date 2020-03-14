@@ -4,10 +4,8 @@
 
     <shape android:shape="line">
         <stroke
-            android:dashGap="5px"
-            android:dashWidth="5px"
             android:color="#979797"
-            android:width="1.4dp" />
+            android:width="2dp" />
     </shape>
 
 </rotate>
