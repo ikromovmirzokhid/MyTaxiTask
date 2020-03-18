@@ -265,7 +265,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/trip_time_field_text"
                 android:textColor="@color/secondary_text_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -278,7 +278,7 @@
                 android:gravity="end"
                 android:text="@string/trip_time_text"
                 android:textColor="@color/text_color"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -291,7 +291,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/distance_field_text"
                 android:textColor="@color/secondary_text_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tripTimeField" />
@@ -305,7 +305,7 @@
                 android:gravity="end"
                 android:text="@string/distance_text"
                 android:textColor="@color/text_color"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tripTime" />
 
@@ -336,7 +336,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/base_fare_field_text"
                 android:textColor="@color/secondary_text_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -349,7 +349,7 @@
                 android:gravity="end"
                 android:text="@string/base_fare_text"
                 android:textColor="@color/text_color"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -361,7 +361,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/ride_fee_field_text"
                 android:textColor="@color/secondary_text_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/baseFareField" />
 
@@ -374,7 +374,7 @@
                 android:gravity="end"
                 android:text="@string/ride_fee_text"
                 android:textColor="@color/text_color"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/baseFare" />
 
@@ -387,7 +387,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/waiting_fee_field_text"
                 android:textColor="@color/secondary_text_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rideFeeField" />
@@ -401,7 +401,7 @@
                 android:gravity="end"
                 android:text="@string/waiting_fee_text"
                 android:textColor="@color/text_color"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rideFee" />
 
@@ -424,8 +424,8 @@
 
             <ImageView
                 android:id="@+id/driverPhoto"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:src="@drawable/driver"
@@ -441,7 +441,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/driver_name_text"
                 android:textColor="@color/text_color"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintLeft_toRightOf="@id/driverPhoto"
                 app:layout_constraintTop_toTopOf="@id/driverPhoto" />
 
@@ -467,7 +467,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/rating_text"
                 android:textColor="@color/text_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/ratingField"
                 app:layout_constraintLeft_toRightOf="@id/ratingField"
                 app:layout_constraintTop_toBottomOf="@id/driverName" />
@@ -505,7 +505,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/trips_text"
                 android:textColor="@color/text_color"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/ratingField"
                 app:layout_constraintLeft_toRightOf="@id/tripsField"
                 app:layout_constraintTop_toBottomOf="@id/driverName" />

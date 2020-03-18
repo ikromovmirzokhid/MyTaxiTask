@@ -265,6 +265,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                     wayLatitude = it.latitude
                     wayLongtitude = it.longitude
                     currentPos = LatLng(wayLatitude, wayLongtitude)
+                    googleMap.isMyLocationEnabled = true
+                    googleMap.uiSettings.isMyLocationButtonEnabled = false
                     googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentPos, 15f))
                 }
                 // if current location is null updating location through locationRequest
@@ -330,6 +332,11 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        if (currentPos != null)
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentPos, 15f))
+    }
 }
 
 

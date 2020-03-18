@@ -6,7 +6,7 @@ class TripsHistory {
 
     companion object {
         private val trip1 = Trip(
-            "Sagbon 156 a block, Olmazor distri…", "Amir Temur Avenue 2a block 23 A", 41.3418855,
+            "Sagbon 156 a block, Olmazor", "Amir Temur Avenue 2a block", 41.3418855,
             69.2285395, 41.3259085, 69.2799308, "901234567"
         )
         private val trip2 = Trip(
