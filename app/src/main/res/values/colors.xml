@@ -9,4 +9,5 @@
     <color name="line_color">#DEDEDE</color>
     <color name="secondary_text_color">#999999</color>
     <color name="polyLineColor">#00BEFF</color>
+    <color name="green">#4CAF50</color>
 </resources>

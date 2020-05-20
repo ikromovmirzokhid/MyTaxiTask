@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.imb.googlemapexample.R
 
-class RegionNotSupportedDialog : BottomSheetDialogFragment() {
+class  RegionNotSupportedDialog : BottomSheetDialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
